@@ -1,0 +1,19 @@
+@layout('layout')
+
+@section('change')
+	<div class="row">
+		<div class="col-12 mt-4 mb-4">
+			<h1 class="mt-3">{{candidate.name}}</h1>
+			<img src="{{candidate.image}}">
+			<div class="row">
+				<div class="col-12 col-sm-2 mt-2">
+					Cargo: {{candidate.office}}
+				</div>
+			</div>
+			<div class="row mt-4 mb-4">
+				<div class="col">{{candidate.description}}</div>
+			</div>
+			<a href="/voto/{{candidate.id}}" class="btn btn-primary btn-block">Votar</a>
+		</div>
+	</div>
+@endsection

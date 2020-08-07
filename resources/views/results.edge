@@ -1,0 +1,25 @@
+@layout('layout')
+
+@section('change')
+<div class="row mt-4">
+    <div class="col-12">
+    	<h2>Olá, colaborador!</h2>
+    	<p>Veja abaixo a situação dos votos para cada funcionário.</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+	@each(c in candidates)
+		<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-4">
+			<div class="card" style="width: 18rem;">
+            	<img style="height: 230px; object-fit: cover;" src="{{c.image}}" class="card-img-top" alt="...">
+            	<div class="card-body">
+            	<h5 class="card-title">{{c.name}}</h5>
+            	<h6 class="card-title">{{c.office}}</h6>
+            	<h8 class="card-title"> Porcentagem de votos: {{porc(c.votes)}}%</h8>		
+            </div>
+          </div>
+		</div>
+	@endeach	
+</div>
+@endsection
