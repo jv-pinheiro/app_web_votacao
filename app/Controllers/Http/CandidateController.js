@@ -37,29 +37,6 @@ class CandidateController {
   }
 
   /**
-   * Render a form to be used for creating a new candidate.
-   * GET candidates/create
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async create ({ request, response, view }) {
-  }
-
-  /**
-   * Create/save a new candidate.
-   * POST candidates
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
-  async store ({ request, response }) {
-  }
-
-  /**
    * Display a single candidate.
    * GET candidates/:id
    *
@@ -76,18 +53,6 @@ class CandidateController {
     return view.render('details',{
       candidate: candidates.toJSON()
     })
-  }
-
-  /**
-   * Render a form to update an existing candidate.
-   * GET candidates/:id/edit
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   * @param {View} ctx.view
-   */
-  async edit ({ params, request, response, view }) {
   }
 
   /**
@@ -117,16 +82,6 @@ class CandidateController {
     return response.redirect('/')  
   }
 
-  /**
-   * Delete a candidate with id.
-   * DELETE candidates/:id
-   *
-   * @param {object} ctx
-   * @param {Request} ctx.request
-   * @param {Response} ctx.response
-   */
-  async destroy ({ params, request, response }) {
-  }
 }
 
 module.exports = CandidateController
